@@ -1,0 +1,5 @@
+{
+  "extends": "@demo/typescript-config/react-library.json",
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "types/next-auth.d.ts"],
+  "exclude": ["dist", "build", "node_modules"]
+}
