@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@demo/tailwind-config": "workspace:^",
     "@demo/ui": "workspace:^",
     "next": "14.2.14",
     "react": "^18",
