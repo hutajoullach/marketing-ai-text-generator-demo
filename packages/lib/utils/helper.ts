@@ -20,3 +20,14 @@ export const generateRandomString = (length: string): string => {
 
   return result
 }
+
+export const generateTextOutput = (
+  callback: (result: string) => void,
+  delay: number = 10000,
+): void => {
+  setTimeout(() => {
+    callback(`生成が完了しました。
+
+生成結果：****`)
+  }, delay)
+}

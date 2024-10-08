@@ -6,7 +6,7 @@ const AccountPage = (props: Props) => {
 
   return (
     <div>
-      <>{params.handle}</>
+      <>アカウントページ</>
     </div>
   )
 }

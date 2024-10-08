@@ -6,7 +6,7 @@ const NewPage = (props: Props) => {
 
   return (
     <div>
-      <>{params.handle}</>
+      <>Newページ</>
     </div>
   )
 }

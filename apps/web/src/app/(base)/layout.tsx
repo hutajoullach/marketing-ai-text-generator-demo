@@ -12,7 +12,7 @@ const BaseLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="fixed bottom-3 left-3 z-50">
         <></>
       </div>
-      <>{children}</>
+      <div className="fixed top-12 left-14 right-8">{children}</div>
     </div>
   )
 }
