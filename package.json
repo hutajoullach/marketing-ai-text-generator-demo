@@ -1,6 +1,10 @@
 {
   "name": "marketing-ai-text-generator-demo",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
