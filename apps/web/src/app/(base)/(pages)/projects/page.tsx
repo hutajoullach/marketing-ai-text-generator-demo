@@ -15,12 +15,7 @@ const dummyList: ListItem[] = [
   { id: '5', title: 'Project462', bgColorString: generateRandomString('6') },
 ]
 
-type Props = {
-  params: { handle: string }
-}
-const ProjectsPage = (props: Props) => {
-  const { params } = props
-
+const ProjectsPage = () => {
   return (
     <div className="p-6 space-y-4">
       <ProjectsList list={dummyList} />

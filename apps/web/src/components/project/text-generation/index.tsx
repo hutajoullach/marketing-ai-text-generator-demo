@@ -18,7 +18,6 @@ import {
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -41,7 +40,6 @@ export const TextGenerationView = () => {
     generateTextOutput((result) => {
       setTextOutput(result)
     })
-    // form.reset()
 
     return
   }

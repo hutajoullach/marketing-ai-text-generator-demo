@@ -1,7 +1,5 @@
 'use client'
 
-import { redirect } from 'next/navigation'
-
 import { Button } from '@demo/ui/src/components/ui/button'
 import {
   Avatar,
@@ -19,16 +17,10 @@ import {
   DropdownMenuTrigger,
 } from '@demo/ui/src/components/ui/dropdown-menu'
 
-// import { useNavigation } from '@/store/use-navigation'
-
 type UserNavProps = {
   username: string | null | undefined
 }
 export const UserNav = ({ username }: UserNavProps) => {
-  // const { navbarCollapsed, onNavbarExpand, onNavbarCollapse } = useNavigation(
-  //   (state) => state,
-  // )
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -44,7 +36,7 @@ export const UserNav = ({ username }: UserNavProps) => {
           <div className="flex flex-col space-y-1">
             <span className="text-sm font-medium leading-none">{username}</span>
             <span className="text-xs leading-none text-muted-foreground">
-              {/* {`@${}`} */}
+              {`@${''}`}
             </span>
           </div>
         </DropdownMenuLabel>
@@ -62,14 +54,10 @@ export const UserNav = ({ username }: UserNavProps) => {
             Settings
             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
-          {/* <DropdownMenuItem onClick={onNavbarCollapse}> */}
-          {/*   Hide Navigation */}
-          {/* </DropdownMenuItem> */}
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
           Log out
-          {/* <SignOutButton /> */}
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>

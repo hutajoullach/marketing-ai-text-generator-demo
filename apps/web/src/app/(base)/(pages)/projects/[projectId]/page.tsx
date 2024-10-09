@@ -7,12 +7,7 @@ import {
 
 import { TextGenerationView } from '@/components/project/text-generation'
 
-type Props = {
-  params: { projectId: string }
-}
-const ProjectIdPage = (props: Props) => {
-  const { params } = props
-
+const ProjectIdPage = () => {
   return (
     <div className="pt-6 pl-10">
       <div className="flex items-center justify-between">

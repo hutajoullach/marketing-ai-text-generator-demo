@@ -1,13 +1,6 @@
 'use client'
 
-import { usePathname, useParams } from 'next/navigation'
-import {
-  FolderOpenDot,
-  FolderPlus,
-  Settings,
-  Database,
-  BarChart3,
-} from 'lucide-react'
+import { FolderOpenDot, FolderPlus, Settings } from 'lucide-react'
 
 import { ScrollArea } from '@demo/ui/src/components/ui/scroll-area'
 
@@ -31,25 +24,7 @@ const guestRoutes = [
   },
 ]
 
-// const enterpriseRoutes = [
-//   {
-//     icon: Database,
-//     label: 'Data',
-//     href: 'enterprise/data',
-//   },
-//   {
-//     icon: BarChart3,
-//     label: 'Analytics',
-//     href: 'enterprise/analytics',
-//   },
-// ]
-
 export const Routes = () => {
-  const pathname = usePathname()
-  const params = useParams()
-
-  // const isEnterprisePage = pathname?.includes('/enterprise')
-  // const routes = isEnterprisePage ? enterpriseRoutes : guestRoutes
   const routes = guestRoutes
 
   return (

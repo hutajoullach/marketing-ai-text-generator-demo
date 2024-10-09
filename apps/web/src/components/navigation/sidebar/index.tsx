@@ -16,18 +16,7 @@ export const Sidebar = () => {
         <div className="flex flex-col w-full flex-1 py-2">
           <Routes />
         </div>
-        <div className="pb-3 mt-auto flex items-center flex-col gap-y-4">
-          {/* <UserButton */}
-          {/*   afterSignOutUrl="/" */}
-          {/*   appearance={{ */}
-          {/*     elements: { */}
-          {/*       avatarBox: 'h-[36px] w-[36px]', */}
-          {/*     }, */}
-          {/*   }} */}
-          {/* /> */}
-
-          {/* <SidebarToggle /> */}
-        </div>
+        <div className="pb-3 mt-auto flex items-center flex-col gap-y-4"></div>
       </div>
     </Wrapper>
   )

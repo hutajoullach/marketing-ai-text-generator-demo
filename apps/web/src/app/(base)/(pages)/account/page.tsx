@@ -1,9 +1,4 @@
-type Props = {
-  params: { handle: string }
-}
-const AccountPage = (props: Props) => {
-  const { params } = props
-
+const AccountPage = () => {
   return (
     <div>
       <>アカウントページ</>

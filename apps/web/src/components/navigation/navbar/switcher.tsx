@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useParams, useRouter } from 'next/navigation'
-import { ChevronsUpDown, Check, PlusCircle } from 'lucide-react'
+import { useState } from 'react'
+import { ChevronsUpDown, PlusCircle } from 'lucide-react'
 
 import { generateRandomString } from '@demo/lib/utils/helper'
 import { cn } from '@demo/ui/src/lib/utils'
@@ -30,11 +29,8 @@ import {
 type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
 interface SwitcherProps extends PopoverTriggerProps {}
 export const Switcher = ({ className }: SwitcherProps) => {
-  const router = useRouter()
-  const params = useParams()
-
   const [open, setOpen] = useState(false)
-  const [iconString, setIconString] = useState(() => generateRandomString('6'))
+  const [iconString] = useState(() => generateRandomString('6'))
   const selectedProject = {
     label: 'My Project',
   }
@@ -109,7 +105,6 @@ export const Switcher = ({ className }: SwitcherProps) => {
               <CommandItem
                 onSelect={() => {
                   setOpen(false)
-                  // onOpen('createProject')
                 }}
                 className="cursor-pointer"
               >

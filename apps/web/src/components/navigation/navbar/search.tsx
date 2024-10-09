@@ -1,25 +1,18 @@
 'use client'
 
 import { Search as LucideSearch } from 'lucide-react'
-import { useRouter } from 'next/navigation'
-import { useState, useEffect, useCallback } from 'react'
 
 import { cn } from '@demo/ui/src/lib/utils'
 import { Button } from '@demo/ui/src/components/ui/button'
 
 export const Search = () => {
-  const router = useRouter()
-
   return (
     <Button
       variant="outline"
       className={cn(
         'relative h-9 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none md:w-40 lg:w-64',
       )}
-      onClick={() => {
-        // onOpen('searchQuery')
-      }}
-      // {...props}
+      onClick={() => {}}
     >
       <LucideSearch className="w-3.5 h-3.5 mr-0 md:mr-1" />
       <span className="hidden md:inline-flex">Search...</span>
