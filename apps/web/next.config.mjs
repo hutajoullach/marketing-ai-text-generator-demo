@@ -1,6 +1,8 @@
 import { config } from 'dotenv'
 
-config({ path: '../../.env' })
+if (process.env.NODE_ENV !== 'production') {
+  config({ path: '../../.env' })
+}
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
