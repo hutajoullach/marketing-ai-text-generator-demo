@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@auth/drizzle-adapter": "^1.4.1",
+    "@demo/drizzle": "workspace:^",
     "@demo/tailwind-config": "workspace:^",
     "bcryptjs": "^2.4.3",
     "drizzle-orm": "^0.31.2",

@@ -1,0 +1,27 @@
+{
+  "name": "@demo/drizzle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "private": true,
+  "scripts": {
+    "build": "drizzle-kit generate",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:migrate": "drizzle-kit migrate",
+    "drizzle:studio": "drizzle-kit studio"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@demo/typescript-config": "workspace:^",
+    "@neondatabase/serverless": "^0.9.5",
+    "drizzle-orm": "^0.31.4",
+    "next-auth": "5.0.0-beta.19"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "0.22.8",
+    "typescript": "^5"
+  }
+}
