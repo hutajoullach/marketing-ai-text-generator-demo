@@ -16,10 +16,10 @@ import { getTwoFactorConfirmationByUserId } from '@demo/lib/utils/auth'
 //   sendVerificationEmail,
 //   sendTwoFactorTokenEmail,
 // } from '@demo/lib/utils/mail'
-import {
-  generateVerificationToken,
-  // generateTwoFactorToken,
-} from '@demo/lib/utils/token'
+// import {
+//   generateVerificationToken,
+//   generateTwoFactorToken,
+// } from '@demo/lib/utils/token'
 
 export const login = async (
   values: z.infer<typeof LoginSchema>,
@@ -40,9 +40,9 @@ export const login = async (
   }
 
   if (!existingUser.emailVerified) {
-    const verificationToken = await generateVerificationToken(
-      existingUser.email,
-    )
+    // const verificationToken = await generateVerificationToken(
+    //   existingUser.email,
+    // )
 
     // await sendVerificationEmail(
     //   verificationToken.email,
