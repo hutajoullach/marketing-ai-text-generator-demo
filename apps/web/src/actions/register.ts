@@ -8,7 +8,7 @@ import { RegisterSchema } from '@demo/lib/schemas/auth'
 import { db } from '@demo/drizzle'
 import { users } from '@demo/drizzle/schema'
 import { getUserByEmail } from '@demo/lib/utils/user'
-import { sendVerificationEmail } from '@demo/lib/utils/mail'
+// import { sendVerificationEmail } from '@demo/lib/utils/mail'
 import { generateVerificationToken } from '@demo/lib/utils/token'
 
 export const register = async (values: z.infer<typeof RegisterSchema>) => {
@@ -37,7 +37,7 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
     .execute()
 
   const verificationToken = await generateVerificationToken(email)
-  await sendVerificationEmail(verificationToken.email, verificationToken.token)
+  // await sendVerificationEmail(verificationToken.email, verificationToken.token)
 
   return { success: 'Confirmation email sent!' }
 }

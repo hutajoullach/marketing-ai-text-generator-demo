@@ -27,11 +27,11 @@ import {
   generatePasswordResetToken,
   generateTwoFactorToken,
 } from './token'
-import {
-  sendVerificationEmail,
-  sendPasswordResetEmail,
-  sendTwoFactorTokenEmail,
-} from './mail'
+// import {
+//   sendVerificationEmail,
+//   sendPasswordResetEmail,
+//   sendTwoFactorTokenEmail,
+// } from './mail'
 
 export const registerUser = async (values: z.infer<typeof RegisterSchema>) => {
   const validatedFields = RegisterSchema.safeParse(values)
@@ -60,10 +60,10 @@ export const registerUser = async (values: z.infer<typeof RegisterSchema>) => {
       .execute()
 
     const verificationToken = await generateVerificationToken(email)
-    await sendVerificationEmail(
-      verificationToken.email,
-      verificationToken.token,
-    )
+    // await sendVerificationEmail(
+    //   verificationToken.email,
+    //   verificationToken.token,
+    // )
 
     return { success: 'Confirmation email sent!' }
   } catch (error) {
@@ -142,10 +142,10 @@ export const loginUser = async (
   if (!existingUser.emailVerified) {
     const verificationToken = await generateVerificationToken(email)
 
-    await sendVerificationEmail(
-      verificationToken.email,
-      verificationToken.token,
-    )
+    // await sendVerificationEmail(
+    //   verificationToken.email,
+    //   verificationToken.token,
+    // )
 
     return { success: 'Confirmation email sent!' }
   }
@@ -190,7 +190,7 @@ export const loginUser = async (
       })
     } else {
       const twoFactorToken = await generateTwoFactorToken(email)
-      await sendTwoFactorTokenEmail(twoFactorToken.email, twoFactorToken.token)
+      // await sendTwoFactorTokenEmail(twoFactorToken.email, twoFactorToken.token)
 
       return { twoFactor: true }
     }
@@ -234,10 +234,10 @@ export const resetPassword = async (
   }
 
   const passwordResetToken = await generatePasswordResetToken(email)
-  await sendPasswordResetEmail(
-    passwordResetToken.email,
-    passwordResetToken.token,
-  )
+  // await sendPasswordResetEmail(
+  //   passwordResetToken.email,
+  //   passwordResetToken.token,
+  // )
 
   return { success: 'Reset email sent!' }
 }
