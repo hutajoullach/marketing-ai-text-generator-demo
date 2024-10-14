@@ -11,7 +11,7 @@ import {
 
 const { auth } = NextAuth(authConfig)
 
-export default auth((req: NextRequest & { auth: Session | null }, ctx: any) => {
+export default auth((req: NextRequest & { auth: Session | null }) => {
   const { nextUrl } = req
   const isLoggedIn = !!req.auth
 
