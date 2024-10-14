@@ -12,13 +12,13 @@ import { getUserByEmail } from '@demo/lib/utils/user'
 import { getTwoFactorTokenByEmail } from '@demo/lib/utils/auth'
 import { DEFAULT_LOGIN_REDIRECT } from '@demo/lib/authjs/routes'
 import { getTwoFactorConfirmationByUserId } from '@demo/lib/utils/auth'
-import {
-  sendVerificationEmail,
-  sendTwoFactorTokenEmail,
-} from '@demo/lib/utils/mail'
+// import {
+//   sendVerificationEmail,
+//   sendTwoFactorTokenEmail,
+// } from '@demo/lib/utils/mail'
 import {
   generateVerificationToken,
-  generateTwoFactorToken,
+  // generateTwoFactorToken,
 } from '@demo/lib/utils/token'
 
 export const login = async (
@@ -44,10 +44,10 @@ export const login = async (
       existingUser.email,
     )
 
-    await sendVerificationEmail(
-      verificationToken.email,
-      verificationToken.token,
-    )
+    // await sendVerificationEmail(
+    //   verificationToken.email,
+    //   verificationToken.token,
+    // )
 
     return { success: 'Confirmation email sent!' }
   }
@@ -93,8 +93,8 @@ export const login = async (
         })
         .execute()
     } else {
-      const twoFactorToken = await generateTwoFactorToken(existingUser.email)
-      await sendTwoFactorTokenEmail(twoFactorToken.email, twoFactorToken.token)
+      // const twoFactorToken = await generateTwoFactorToken(existingUser.email)
+      // await sendTwoFactorTokenEmail(twoFactorToken.email, twoFactorToken.token)
 
       return { twoFactor: true }
     }
