@@ -22,7 +22,7 @@ import { Input } from '@demo/ui/src/components/ui/input'
 import { Button } from '@demo/ui/src/components/ui/button'
 
 import { InlineErrorMessage } from '@/components/primitives/inline-error-message'
-import { InlineSuccessMessage } from '@/components/primitives/inline-success-message'
+// import { InlineSuccessMessage } from '@/components/primitives/inline-success-message'
 
 export const LoginForm = () => {
   const searchParams = useSearchParams()
@@ -143,7 +143,7 @@ export const LoginForm = () => {
           )}
         </div>
         <InlineErrorMessage message={error || urlError} />
-        <InlineSuccessMessage message={success} />
+        {/* <InlineSuccessMessage message={success} /> */}
         <Button disabled={isPending} type="submit" className="w-full">
           {showTwoFactor ? 'Confirm' : 'Login'}
         </Button>
