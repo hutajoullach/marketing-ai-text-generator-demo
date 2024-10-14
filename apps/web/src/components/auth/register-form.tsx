@@ -48,6 +48,7 @@ export const RegisterForm = () => {
         setSuccess(data.success)
 
         if (!data.error) {
+          console.log(success)
           router.push('/auth/login')
         }
       })
